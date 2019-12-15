@@ -52,7 +52,7 @@ If you have the Intel AC 9260 like me though, just download the drivers from [he
 Install the following packages with apt install:
 * ```firmware-iwlwifi```
 * ```intel-microcode``` (non-free) and
-* ```firmware-misc-nonfree`` 
+* ```firmware-misc-nonfree```
 
 Reboot (remember the `nouveau.modeset=0` flag). Wi-Fi should work fine now at each boot.
 
