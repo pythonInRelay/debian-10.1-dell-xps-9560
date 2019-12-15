@@ -49,10 +49,10 @@ You'll probably have the Broadcom WiFi card, in which case I can't help you with
 
 If you have the Intel AC 9260 like me though, just download the drivers from [here](https://www.intel.com/content/www/us/en/support/articles/000005511/network-and-io/wireless-networking.html) read the included readme.md and copy the file to the correct directory and then also follow a few more steps to have the Wi-Fi work automatically at boot (Big thanks to 'dperezvi' for this info).
 
-Install the following packages with apt:
-* firmware-iwlwifi
-* intel-microcode (non-free) and
-* firmware-misc-nonfree 
+Install the following packages with apt install:
+* ```firmware-iwlwifi```
+* ```intel-microcode``` (non-free) and
+* ```firmware-misc-nonfree`` 
 
 Reboot (remember the `nouveau.modeset=0` flag). Wi-Fi should work fine now at each boot.
 
