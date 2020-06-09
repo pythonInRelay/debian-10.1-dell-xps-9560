@@ -66,6 +66,6 @@ That's it. Absolutely painless compared to other distros that require a mountain
 
 Go forth and enjoy Debian!
 
-Todo for later in this guide:
+### NB!
 
-1. Reduce battery drain from ~13mW to ~6mW by fully disabling the dedicated Nvidia GTX 1050 (I won't use it on Linux).
+This guide will not be updated any further. Support and PnP capability improves with every release. With this guide you should be up and running well enough to be able to seek out further help and troubleshooting advice on your own.
