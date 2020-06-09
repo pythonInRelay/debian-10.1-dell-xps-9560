@@ -8,16 +8,16 @@ Hopefully this "guide" can help some people in getting this marvelous distro to 
 
 # My Laptop Specs
 
-* CPU: Intel® Core™ i5-7300HQ CPU @ 2.50GHz × 4
-* RAM: 16GB DDR4 Kingston HyperX *(replaced the Hynix RAM)
+* CPU: Intel® Core™ i5-7300HQ Quad Core CPU @ 2.50GHz
+* RAM: 16GB DDR4 Kingston HyperX *(replaced the standard 8GB Hynix RAM)*
 * HDD: SK Hynix 256GB Nvme SSD
 * GFX: Nvidia GTX 1050
-* WLAN: Intel AC 9260 *(I ditched the Broadcom Killer Wireless immediately)
-* PANEL: 4K 3840x2160 Touchscreen
+* WLAN: Intel AC 9260 *(I ditched the Broadcom Killer Wireless immediately)*
+* PANEL: 4K 3840x2160 Glossy Touchscreen
 
 # Pre-Installation Requirements
 
-If it somehow wasn't obvious. You'll need to change a few BIOS settings on your Dell. Firstly, make sure your BIOS is updated to the latest version. You can do this on Windows 10 using the [SupportAssist app](https://www.dell.com/support/contents/us/en/04/article/product-support/self-support-knowledgebase/software-and-downloads/SupportAssist) which can be downloaded from the Windows Store (run a full check and install updates). You can also update the BIOS from Dell's site [here](https://www.dell.com/support/home/us/en/04/drivers/driversdetails?driverid=yf1g0&lwp=rt). Make sure to double check that you're installing the latest BIOS version.
+If it somehow wasn't obvious, you'll need to change a few BIOS settings on your Dell. Firstly, make sure your BIOS is updated to the latest version. You can do this on Windows 10 using the [SupportAssist app](https://www.dell.com/support/contents/us/en/04/article/product-support/self-support-knowledgebase/software-and-downloads/SupportAssist) which can be downloaded from the Windows Store (run a full check and install updates). You can also update the BIOS from Dell's site [here](https://www.dell.com/support/home/us/en/04/drivers/driversdetails?driverid=yf1g0&lwp=rt). Make sure to double check that you're installing the latest BIOS version.
 
 The BIOS settings we need to change are:
 
@@ -34,9 +34,9 @@ Nothing else needs to be done here and you should now be ready to install Debian
 
 Debian (obviously) doesn't like non-free drivers and software and it provides very limited support for them. So the first problem I had was using the 'netinst' Debian .iso which requires internet as it requests the missing Intel 9260 Wi-Fi drivers during the installation which I couldn't be bothered to look for and provide.
 
-Another option here would be just using a third-party Thunderbolt to Ethernet adapter that I have which works OOTB, but I didn't know where it was. Therefore I used [a full 'live' .iso](https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/) to install Debian. Here I picked Gnome because I find it's the perfect balance between performance and style and I plan on changing the theme later.
+Another option here would be just using a third-party Thunderbolt to Ethernet adapter that I have which works OOTB with Linux, but I didn't know where it was. Therefore I used [a full 'live' .iso](https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/) to install Debian. Here I picked Gnome because I find it's the perfect balance between performance and style and I plan on changing the theme later. **It is important to note that as of the time of writing Xfce and other DEs do not work properly with 4K displays (DPI issues) but Gnome should work OOTB.**
 
-I used [BalenaEtcher](https://www.balena.io/etcher/) to make the installation USB, but [Rufus](https://rufus.ie/) also works. At first I tried to use a Corsair GTX 3.1 256GB USB-SSD but Debian kept complaining that the 'CDROM' media couldn't be found and addtional necessary files were missing. So I wound up having to go with a much older Lexar 32GB USB 3.0 drive which worked without any issues. If you get the same sort of 'CDROM' error, just use a different USB drive.
+I used [BalenaEtcher](https://www.balena.io/etcher/) to make the installation USB, but [Rufus](https://rufus.ie/) also works. At first I tried to use a Corsair GTX 3.1 256GB USB-SSD key but Debian kept complaining that the 'CDROM' media couldn't be found and addtional necessary files were missing. So I wound up having to go with a much older Lexar 32GB USB 3.0 drive which worked without any issues. If you get the same sort of 'CDROM' error, I recommend just use a different USB drive to save hassle.
 
 Install Debian with the locale and specific settings that you require. I chose to resize and partition my SSD and give Debian about 50GB to run it alongside Windows 10, as I'll be using Debian just for programming and some Linux software. Make sure that if you want to dual-boot Windows 10, you are sure if Windows is installed in UEFI mode or Legacy. When asked to "force UEFI" installation you can do so if Windows 10 is also installed in UEFI mode (it is by default on this laptop, but check first to be sure!)
 
@@ -49,7 +49,7 @@ On the grub screen just press 'e' and add that boot flag at the end of the 'linu
 
 You'll probably have the Broadcom WiFi card, in which case I can't help you with how to get that working (if it doesn't already) but I'm sure a simple Google search for "Broadcom WiFi Debian" wil be enough to solve that.
 
-If you have the Intel AC 9260 like me though, just download the drivers from [here](https://www.intel.com/content/www/us/en/support/articles/000005511/network-and-io/wireless-networking.html) read the included readme.md and copy the file to the correct directory and then also follow a few more steps to have the Wi-Fi work automatically at boot (Big thanks to 'dperezvi' for this info).
+If you have the Intel AC 9260 like me though, just download the drivers from [here](https://www.intel.com/content/www/us/en/support/articles/000005511/network-and-io/wireless-networking.html), load them onto a USB to transfer to your laptop, read the included readme.md and copy the file to the correct directory and then also follow a few more steps below to have the Wi-Fi work automatically at boot (Big thanks to 'dperezvi' for this info).
 
 Install the following packages with apt install:
 * ```firmware-iwlwifi```
@@ -69,3 +69,5 @@ Go forth and enjoy Debian!
 ### NB!
 
 *This guide will not be updated any further. Support and PnP capability improves with every release. With this guide you should be up and running well enough to be able to seek out further help and troubleshooting advice on your own.*
+
+Final Update: 09/06/2020
