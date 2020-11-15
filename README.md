@@ -1,6 +1,6 @@
 [![Donate via Paypal.me](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/djbp)
 
-# How to install Debian 10.4 "buster" on your Dell XPS 15 9560
+# How to install Debian 10.6 "buster" on your Dell XPS 15 9560
 
 Debian for me as always been my favourite Linux distro. Where every other mainstream distro has required consistent debugging, [16 plus boot flags](https://forum.mxlinux.org/viewtopic.php?t=47931), endless "tweaking" to prevent freezes and kernel panics and no less than 1000 cups of coffee to stay sane. Debian just "works" basically right out of the box. Therefore it's no surprise that installing Debian on my Dell XPS 9560 (Touchscreen 4K variant) was a total piece of cake.
 
