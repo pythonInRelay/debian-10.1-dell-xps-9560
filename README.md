@@ -70,4 +70,4 @@ Go forth and enjoy Debian!
 
 *This guide will not be updated any further. Support and PnP capability improves with every release. With this guide you should be up and running well enough to be able to seek out further help and troubleshooting advice on your own.*
 
-Final Update: 09/06/2020
+Final Update: 15/11/2020
